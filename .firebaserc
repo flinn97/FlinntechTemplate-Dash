@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "eidashboard",
+    "production": "eidashboard",
+    "flinn": "eidashboard"
+  },
+  "targets": {},
+  "etags": {}
+}
