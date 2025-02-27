@@ -1,21 +1,20 @@
-import Page1 from './page1';
-import Page2 from './page2';
+// import Page1 from './page1';
+// import Page2 from './page2';
 import {db, auth, storage } from './firebase.config.js';
 import * as MyComponents from './models/myComponents.js';
 import AppBaseClass from './templateTech/baseClasses/AppBaseClass.js';
 import Home from './view/home/home.js';
 import OemPopupContent from './view/popups/OemPopupContent.js';
-import TopicManager from './view/TopicManager/topicManager.js';
-import MediaMover from './view/popups/mediaMover.js';
-import MapMover from './view/popups/mapMover.js';
-import TopicMover from './view/popups/topicMover.js';
-import PinPopup from './view/popups/pinPopup.js';
-import logo from "./assets/eilogo.png"
+// import MediaMover from './view/popups/mediaMover.js';
+// import MapMover from './view/popups/mapMover.js';
+// import TopicMover from './view/popups/topicMover.js';
+// import PinPopup from './view/popups/pinPopup.js';
+import logo from "./assets/eilogo.png";
 import ISRandCampaignPopup from './view/popups/otherListPopup';
 import { navInterface } from './navTech/navInterface';
 import SettingsPopup from './view/home/settingsButton';
 import EmailPopup from './view/popups/emailPopup';
-import "./style.scss"
+import "./style.scss";
 import PromoText from './view/home/promoText';
 
 export default class App extends AppBaseClass {
@@ -34,10 +33,10 @@ export default class App extends AppBaseClass {
         // {path:"/subTopic", comp: TopicManager}
       ],
       popups:[
-      {content:MediaMover, popupSwitch:"imageMover", },
-      {content:MapMover},
-      {content:TopicMover},
-      {content:PinPopup},
+      // {content:MediaMover, popupSwitch:"imageMover", },
+      // {content:MapMover},
+      // {content:TopicMover},
+      // {content:PinPopup},
       ]
     }
     this.registerListWithFactory([...Object.values(MyComponents)])
@@ -52,3 +51,4 @@ export default class App extends AppBaseClass {
     navList.add(img);
   }
 }
+

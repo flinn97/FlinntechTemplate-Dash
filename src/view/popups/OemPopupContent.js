@@ -10,11 +10,10 @@ export default class OemPopupContent extends BaseComponent{
         }
     }
     render(){
-      let text = this.props.obj?"Edit":"Add"
-      let button = <RunButton   content="Save" isPopup={true} callbackFunc={this.props.callbackFunc} />
-      if(this.props.obj){
-        
-        button = <UpdateButton obj={this.props.obj} content="Save" isPopup={true} callbackFunc={this.props.callbackFunc}/>
+      let text = this.propsState.popupSwitch?.includes("update")?"Edit":"Add"
+      let button = <RunButton content="Save" isPopup={true} callbackFunc={this.props.callbackFunc} />
+      if(this.propsState.popupSwitch?.includes("update")){
+        button = <UpdateButton obj={this.propsState.currentPopupComponent} content="Save" isPopup={true} callbackFunc={this.props.callbackFunc}/>
       }
         return(
         <div style={{padding:"10px", paddingBottom:"100px", height:"65%"}} className={this.props.pageClass||this.state.defaultClass}>

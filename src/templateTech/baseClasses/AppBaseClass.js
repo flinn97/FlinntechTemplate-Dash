@@ -137,6 +137,18 @@
     }
   }
 
+  createPopupObj(){
+    let obj = {
+      content:"some react content",
+      popupSwitch: "addObjectSwitch",
+      componentType: "topic",
+      popupType:"Ei", 
+      popupTheme:"Popup"
+
+    }
+    return obj
+  }
+
   /**
    * dispatch
    * 

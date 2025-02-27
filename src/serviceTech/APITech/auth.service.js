@@ -599,6 +599,7 @@ class Auth {
      * @returns {array} - Array of updated components.
      */
     async update(arr, path, timeKey, dispatchKey) {
+        
         return await this.operate(arr, updateDoc, path, dispatchKey || "updated", timeKey || "lastUpdated");
     }
 
@@ -624,6 +625,7 @@ class Auth {
      */
     async operate(arr, operation, path, dispatchKey, timeKey) {
         try {
+            
             arr = await this.prep(arr); // Prepares the components
             path = path || this.path; // Sets default path if not provided
             for (let component of arr) {

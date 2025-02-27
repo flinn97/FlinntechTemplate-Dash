@@ -14,6 +14,8 @@ export default class OEMview extends BaseComponent{
 
         }
     }
+
+   
   
 
     getInnerContent(){
@@ -32,7 +34,7 @@ export default class OEMview extends BaseComponent{
         <div className="scroller" style={{height:"130px", marginLeft:"12px"}}>
       <MapComponent name={this.props.name}  mapSectionClass="Map-Section-ei"
       cells={[
-        {type:"attribute", name:"name", style:{cursor:"pointer"}, itemClick:(obj)=>{this.dispatch({currentPopupComponent:obj, popupSwitch:"updateOem"})}}, 
+        {type:"attribute", name:"name", style:{cursor:"pointer"}, itemClick:(obj)=>{this.dispatch({currentPopupComponent:obj, popupSwitch:"updateOem",})}}, 
         {type:"attribute", name:"category", }, 
         {type:"custom", custom:IncrementQuote, }, 
         {type:"del", class:"text fitCC", style:{cursor:"pointer"}}
